@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Energym</title>
+    <link rel="stylesheet" href="Registros.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="Logo.jpeg" alt="Energym Logo" class="logo">
+            <h1 class="title">ENERGYM</h1>
+            <p class="slogan">El dolor es temporal, pero la satisfacción es para siempre</p>
+        </header>
+
+
+        <form class="form" method="POST" action="registros.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Selecciona una opción</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="O">Otro</option>
+            </select>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <button type="submit" class="btn">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
