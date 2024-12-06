@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("sssssi", $nombre, $apellido, $correo, $contrasena, $genero, $edad);
 
         if ($stmt->execute()) {
-            header("Location: inicio.php");
+            header("Location: Inicio.php");
             exit(); 
         } else {
             echo "Error al registrar: " . $stmt->error;

@@ -14,39 +14,67 @@ h1 {
     font-size: 2rem;
 }
 
+/* Formulario en una sola fila */
 form {
     margin: 20px auto;
-    text-align: center;
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    display: flex; /* Alinear elementos en fila */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    gap: 10px; /* Espaciado entre los elementos */
+    width: fit-content; /* Ajustar el ancho al contenido */
 }
 
+/* Campo de búsqueda */
 input[type="text"] {
-    width: 70%;
+    width: 300px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
 
-button[type="submit"] {
+/* Botones generales */
+button[type="submit"],
+button[name="cerrar_sesion"] {
     padding: 8px 16px;
     border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
-    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Botón de Buscar */
+button[type="submit"] {
+    background-color: #4CAF50; /* Verde */
+    color: white;
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Verde más oscuro */
 }
 
+/* Botón de Cerrar Sesión */
+button[name="cerrar_sesion"] {
+    background-color: #d9534f; /* Rojo */
+    color: white;
+}
+
+button[name="cerrar_sesion"]:hover {
+    background-color: #c9302c; /* Rojo más oscuro */
+}
+
+button[name="cerrar_sesion"]:active {
+    background-color: #ac2925; /* Rojo apagado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla de datos */
 table {
     width: 80%;
     margin: 20px auto;
@@ -71,6 +99,7 @@ td {
     font-size: 1rem;
 }
 
+/* Enlaces */
 a {
     text-decoration: none;
     color: #007bff;
@@ -89,16 +118,24 @@ a:visited {
     color: #007bff;
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     form {
         width: 90%;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        gap: 15px;
+    }
+
+    input[type="text"] {
+        width: 100%; /* Campo de búsqueda se ajusta al ancho */
     }
 
     table {
-        width: 100%;
+        width: 100%; /* Tabla ocupa todo el ancho disponible */
     }
 
     h1 {
         font-size: 1.5rem;
     }
 }
+

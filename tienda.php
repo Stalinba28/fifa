@@ -31,26 +31,65 @@ $usuario = $_SESSION['nombre_usuario'];
             <h1>ENERGYM</h1>
             <p>EL DOLOR ES TEMPORAL PERO LA SATISFACCIÓN ES PARA SIEMPRE</p>
         </div>
-        <a href="inicio.php" class="btn">Volver al Inicio</a>
+        <a href="Inicio.php" class="btn">Volver al Inicio</a>
     </header>
+
 
     <main>
         <h1>Bienvenido a la tienda, <?= htmlspecialchars($usuario) ?> 👊</h1>
+        
         <section class="productos">
-            <?php foreach ($productos as $producto): ?>
-                <div class="producto">
-                    <div class="producto-imagen">
-                        <img src="/Semestral_Desarrollo/<?= htmlspecialchars($producto['imagen']) ?>" alt="<?= htmlspecialchars($producto['nombre']) ?>" width="150">
-                    </div>
-                    <div class="producto-info">
-                        <h2><?= htmlspecialchars($producto['nombre']) ?></h2>
-                        <p class="precio">$<?= htmlspecialchars($producto['precio']) ?></p>
-                    </div>
-                    <div class="producto-btn">
-                        <button class="btn-agregar">Añadir al carrito</button>
-                    </div>
+            <div class="producto">
+                <div class="producto-imagen">
+                    <img src="Proteina_Whey.jpg" alt="Proteína Whey" width="150">
                 </div>
-            <?php endforeach; ?>
+                <div class="producto-info">
+                    <h2>Proteína Whey</h2>
+                    <p class="precio">$20.99</p>
+                </div>
+                <div class="producto-btn">
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-imagen">
+                    <img src="Creatina.jpg" alt="Creatina" width="150">
+                </div>
+                <div class="producto-info">
+                    <h2>Creatina</h2>
+                    <p class="precio">$15.49</p>
+                </div>
+                <div class="producto-btn">
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-imagen">
+                    <img src="Aminoacidos.jpg" alt="Aminoácidos" width="150">
+                </div>
+                <div class="producto-info">
+                    <h2>Aminoácidos</h2>
+                    <p class="precio">$12.99</p>
+                </div>
+                <div class="producto-btn">
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-imagen">
+                    <img src="Pre_entrenamiento.jpg" alt="Pre-entrenamiento" width="150">
+                </div>
+                <div class="producto-info">
+                    <h2>Pre-entrenamiento</h2>
+                    <p class="precio">$18.99</p>
+                </div>
+                <div class="producto-btn">
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </div>
+            </div>
         </section>
     </main>
 

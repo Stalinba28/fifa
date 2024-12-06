@@ -57,7 +57,7 @@ $usuario = $_SESSION['nombre_usuario'];
             <p>Si tienes una lesión o condición médica, te recomendamos consultar a un médico antes de comenzar cualquier rutina. Aunque nuestras rutinas son seguras, es importante asegurarte de que sean adecuadas para tu situación específica.</p>
         </section>
         
-        <a href="inicio.php">Volver a la Página Principal</a>
+        <a href="Inicio.php">Volver a la Página Principal</a>
     </main>
 
     <footer>

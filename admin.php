@@ -23,6 +23,12 @@ if ($busqueda) {
     $sql .= " WHERE nombre LIKE '%$busqueda%' OR correo LIKE '%$busqueda%' OR id LIKE '%$busqueda%'";
 }
 $result = $conn->query($sql);
+
+if (isset($_POST['cerrar_sesion'])) {
+    session_destroy();
+    header('Location: inicio.html');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +44,9 @@ $result = $conn->query($sql);
     <form method="post" action="">
         <input type="text" name="busqueda" placeholder="Buscar usuarios..." value="<?= htmlspecialchars($busqueda) ?>">
         <button type="submit" name="buscar">Buscar</button>
+    </form>
+    <form method="post" action="" style="margin-top: 10px;">
+        <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
     </form>
     <table>
         <thead>

@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($rol === 'admin') {
                     header("Location: admin.php");  
                 } else {
-                    header("Location: inicio.php");  
+                    header("Location: Inicio.php");  
                 }
                 exit;
             } else {

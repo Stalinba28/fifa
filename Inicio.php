@@ -15,7 +15,7 @@ $usuario = $_SESSION['nombre_usuario'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Gym - Inicio</title>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="Inicio.css">
 </head>
 <body>
     <div class="welcome-container">
@@ -48,7 +48,7 @@ $usuario = $_SESSION['nombre_usuario'];
     <section class="hero">
         <h2>¡Bienvenido a tu espacio fitness!</h2>
         <p>Explora nuestras rutinas, productos y servicios para alcanzar tus metas.</p>
-        <img src="Imagen 1.png" alt="Entrenamiento en el gimnasio">
+        <img src="Imagen_1.png" alt="Entrenamiento en el gimnasio">
     </section>
 
     <section class="info">
